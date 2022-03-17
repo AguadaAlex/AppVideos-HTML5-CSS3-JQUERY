@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/mail.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
+
+<head>
+    <title>MW</title>
+</head>
+<body>
+<form id = "compartir" form enctype="text/plain" method= post onsubmit="compartir()">
+    
+    <datalist id="pelicula">
+    <option id="autocompletado"> </option>
+    </datalist>
+    
+    <label id="resultado"></label>
+
+    <label>Emisor</label>
+    <input id="emisor" type="email" placeholder="Emisor@ejemplo.com" />
+   
+    <label>Destinatario</label>
+    <input id="destinatario" type="email" placeholder="Destinatario@ejemplo.com" />
+  
+    <input id="bdy" list="pelicula" name=body type="text"/>
+    <input type="submit" value="Compartir">
+    <button href="index.html">Cancelar</button>
+    </form>
+</body>
+</html>
+
+

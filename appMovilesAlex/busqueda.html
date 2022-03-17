@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MaskWeb</title>
+  <link rel="stylesheet" href="css/style2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="js/cargarGenero.js"></script>
+  <script src="js/busquedaPorNombre.js"></script>
+  <script src="js/cargarMapaContacto.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script  src = "js/all.js" > </script>
+</head>
+
+<body>
+  <!-- MENU NAV BAR -->
+  <header>
+      <div class="menu_bar">
+        <a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+      </div>
+    
+      <nav>
+        <ul>
+          <li><a href="index2.html"><span class="icon-house"></span>Inicio</a></li>
+          <li class="submenu"><a href="#"><span class="icon-suitcase"></span>Ultimas Busquedas</a>
+            <ul class="children" id="ultimaB">
+              
+            </ul>
+          </li>
+          <li class="submenu">
+            <a href="#"><span class="icon-rocket"></span>Generos <i class="fas fa-angle-down"></i></a>
+            <ul class="children" id="pepe">
+              
+            </ul>
+          </li>
+          <li class="submenu"><a href="#"><span class="icon-earth"></span>Años <i class="fas fa-angle-down"></i></a>
+            <ul class="children">
+                <li><a href="porAño.html?anioId=2014">2014</a></li>
+                <li><a href="porAño.html?anioId=2015">2015</a></li>
+                <li><a href="porAño.html?anioId=2016">2016</a></li>
+                <li><a href="porAño.html?anioId=2017">2017</a></li>
+                <li><a href="porAño.html?anioId=2018">2018</a></li>
+                <li><a href="porAño.html?anioId=2019">2019</a></li>
+               
+              </ul>
+        
+        
+        </li>
+          <li><a href="#" id="contac"><span class="icon-mail"></span>Contacto</a></li>
+          
+          <li>
+            <form action="busqueda.html">
+    
+                <div class="searchbar">
+                    <input type="text" placeholder="search" id="busqueda" name="busco">
+                    <div class="icon">
+                      <i class="fas fa-search">
+    
+                        <input type="button" name="submit" id="submit" value="Comment" style="display:none;" />
+    
+                      </i>
+                    </div>
+                  </div>
+            </form>
+    
+          </li>
+        </nav>
+    </ul>
+    </header>
+    
+    <script>
+       $(document).ready(main);
+     
+     var contador = 1;
+      
+     function main () {
+         $('.menu_bar').click(function(){
+             if (contador == 1) {
+                 $('nav').animate({
+                     left: '0'
+                 });
+                 contador = 0;
+             } else {
+                 contador = 1;
+                 $('nav').animate({
+                     left: '-100%'
+                 });
+             }
+         });
+      
+         // Mostramos y ocultamos submenus
+         $('.submenu').click(function(){
+             $(this).children('.children').slideToggle();
+         });
+     }
+     $(".fa-search").click(function(){
+       $(".icon").toggleClass("active");
+      $("input[type='text']").toggleClass("active");
+    });
+      </script>
+     
+     
+      <!-- CUERPO  GRID -------------------------------------------------------------->
+      <div class="row">
+       
+        <div class="main">
+          <!-- PROYECCION DE POSTER DE VIDEOS DE API -->
+            <div class="flex-container">
+                <!-- POSTER -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL CONTENIDO DE ID DE PELICULA------------------------------------------->
+    <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+          </div>
+          <div class="modal-body">
+            <div id="map"></div>
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="modal-footer">
+            
+        </div>
+      
+      </div>
+      </div>
+      <!-- PAGINACION------------------------------------------------------------ -->
+        <!-- PAGINACION------------------------------------------------------------ -->
+        <section class="paginacion">
+          <ul class="muje">
+            <li><a href="index2.html?Id=1" class="active">1</a></li>
+            <li><a href="index2.html?Id=2">2</a></li>
+            <li><a href="index2.html?Id=3">3</a></li>
+            <li><a href="index2.html?Id=4">4</a></li>
+            <li><a href="index2.html?Id=5">5</a></li>
+          </ul>
+        </section>
+      <!-- Footer -->
+      <div class="footer">
+        <h2>Universidad Nacional Arturo Jauretche</h2>
+      </div>
+      
+              
+           
+      
+      
+        
+    </body>
+    </html>
+    

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script> -->
+  <script src="js/validaciones.js"></script>
+    <style type="text/css">
+       .error {color: #f00;}
+    </style>
+<head>
+    <title>MaskWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+ 
+  <!-- Header -->
+  <div class="header">
+    <a href="index.html"><img src="img/logo.png"></a>
+    <h1>Mask Web</h1>
+  </div>
+  
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="barbijos.html">Barbijos</a>
+    <a href="cascos.html">Cascos</a>
+    <a href="mascaras.html">Mascaras</a>
+
+  </div>
+  
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side">
+      <h2>Filtro de Productos</h2>
+      <h5>Tipos:</h5>
+      <form action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">Por definir</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">Por definir</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Por definir</label><br><br>
+        <input type="submit" value="Buscar">
+      </form> 
+      
+    </div>
+    <div class="main">
+        <div class="container">
+            <form action="/action_page.php" id="Formulario">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Nombre</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Nombre" name="firstname" placeholder="nombre..">
+              </div>
+              <div id="mensaje1" class="errores">Ingrese Nombre</div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Apellido</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Apellido" name="lastname" placeholder="su apellido..">
+              </div>
+              <div id="mensaje2" class="errores">Ingrese Apellido</div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="lname">Fecha de nacimiento</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento">
+                </div>
+                <div id="mensaje3" class="errores">Ingrese Fecha de Nacimiento</div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <input type="radio" id="male" name="gender" value="Hombre">
+                <label for="Hombre">Masculino</label><br>
+                <input type="radio" id="female" name="gender" value="Mujer">
+                <label for="Mujer">Femenino</label><br>
+           
+              </div>
+              <div id="mensaje4" class="errores">Ingrese Sexo</div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="country">Valoración de la página</label>
+                </div>
+                <div class="col-75">
+                  <select id="Valoracion" name="country">
+                    <option value="" selected >seleccione opcion</option>
+                    <option value="Lamentable">Lamentable</option>
+                    <option value="Mala">Mala</option>
+                    <option value="Pmejor">Podría ser mejor</option>
+                    <option value="Cumple">Cumple con mis expectativas</option>
+                    <option value="encanto">Me encantó</option>
+                  </select>
+                </div>
+                <div id="mensaje5" class="errores">Ingrese Valoracion</div>
+              </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="fname">Email</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="Email" name="email" placeholder="direccion..">
+                </div>
+                <div id="mensaje6" class="errores">Ingrese Email</div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Comentario</label>
+              </div>
+              <div class="col-75">
+                <textarea id="Comentario" name="subject" placeholder="Escriba su comentario.." style="height:200px"></textarea>
+              </div>
+              <!-- <div id="mensaje6" class="errores"></div> -->
+            </div>
+            <div class="row">
+                <input type="button" id="limpiar" value="Limpiar">
+                <input type="submit" id="bEnviar" value="Submit">
+                <input type="button" id="cancelar" value="Cancelar">
+
+            </div>
+            </form>
+          </div>
+    </div>
+<!-- MODAL ---------------------------------------------- -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  
+  </div>
+
+  
+  <!-- Footer -->
+  <div class="footer">
+    <h2>Universidad Nacional Arturo Jauretche</h2>
+  </div>
+  
+          
+          
+
+
+    
+</body>
+</html>
